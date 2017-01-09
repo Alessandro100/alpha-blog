@@ -3,3 +3,21 @@ $navbar-default-bg: #08088A;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+table{
+  margin: 50px;
+  font-size: 20px;
+  width: 80%;
+  tr{
+    margin: 5px;
+    th{
+      font-weight: bold;
+      color: #08088A;
+      margin: 5px;
+    }
+    td{
+      margin: 5px;
+      height: 10px;
+    }
+  }
+}
+
