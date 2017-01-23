@@ -1,0 +1,16 @@
+<h1>All Users</h1>
+
+  <table>
+    <tr>
+      <th></th>
+      <th>Username</th>
+      <th>Articles</th>
+    </tr>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to gravatar_for(user), user_path(user) %></td>
+        <td><%= link_to user.username, user_path(user) %></td>
+        <td><%= pluralize(user.articles.count, "articles")%></td>
+      </tr>
+    <% end %>
+  </table>

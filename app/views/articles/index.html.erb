@@ -1,4 +1,4 @@
 <h1>This is all the articles</h1>
 <%= link_to "Create a new Article", new_article_path %>
-
-<%= render 'article', obj: @article %>
+<%= render 'article', obj: @articles %>
+<%= will_paginate %>
