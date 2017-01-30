@@ -1,0 +1,19 @@
+<h1 align="center"> Create new category</h1>
+
+<% if @category.errors.any? %>
+<h2>These are the eroores</h2>
+<ul>
+  <% @category.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for(@category, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <%= f.submit("New Category") %>
+<% end %>
+
